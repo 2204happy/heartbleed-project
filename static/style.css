@@ -1,0 +1,51 @@
+* {
+  font-family: sans-serif;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
+#sidebar {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 20%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+#main {
+  height: 100%;
+  width: 60%;
+  top: 0px;
+  left: 20%;
+  position: absolute;
+}
+#sidebarinner {
+  position: absolute;
+  margin-left: 15px;
+}
+#maininner {
+  position: absolute;
+  margin-left: 15px;
+}
+ul,ol {
+  padding-left: 20px;
+}
+a {
+  color: black;
+}
+.sidebarlink {
+  color: white;
+}
+table {
+  border-collapse: collapse;
+}
+table,tr,td,th {
+  border: 1px solid black;
+}
