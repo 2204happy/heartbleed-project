@@ -10,6 +10,10 @@ from datetime import *
 def index():
   return render_template("index.html", thingo = "greeting")
 
+@app.route('/protocols.html')
+def protocols():
+  return render_template("protocols.html", thingo = "greeting")
+
 @app.route('/style.css')
 def style():
   return render_template("style.css")
