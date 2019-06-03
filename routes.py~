@@ -14,7 +14,7 @@ def index():
 def protocols():
   return render_template("protocols.html", thingo = "greeting")
 
-@app.route("/style.css")
+@app.route('/style.css')
 def style():
   return render_template("style.css")
 
