@@ -18,12 +18,12 @@ def protocols():
 def style():
   return render_template("style.css")
 
-#what the heart beet protocol would return
+#what the heartbeat protocol would return
 output = ""
 #very secret data no one should know that we totally won't expliot :)
-secret_string = "a97b79,password_user_bob=\"password12345\",cockie_data_session_1=\"bannana\",123f7a757575a57c57meaning_of_life=42,"
+secret_string = "a97b79,password_user_bob=\"password12345\",cookie_data_session_1=\"bannana\",123f7a757575a57c57meaning_of_life=42,"
 
-@app.route("/demonstration")
+@app.route("/demo.html")
 def demo():
   global output
   #if the request field is empty leave it is blank otherwise popualte it
@@ -59,5 +59,5 @@ def demo():
     output = "Error: input must be an integer"
   
   #html stuff
-  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/demonstration.css\">\n Input: <br>\n <form method=\"get\">\n Request: <input type=\"text\" name=\"request\"> <br>\n Length of request: <input type=\"text\" name=\"length\"> <br>\n <input type=\"submit\">\n </form>\n Output: <br>" + str(output)
+  return render_template("demo.html",content = str(output))
  
