@@ -25,10 +25,16 @@ secret_string = "a97b79,password_user_bob=\"password12345\",cockie_data_session_
 def demo():
   global output
   
-  message = str(request.args.get("request"))
+  if request.args.get("request") == None:
+    message = ""
+  else:
+    message = str(request.args.get("request"))
   try:
-    length = int(request.args.get("length"))
-  
+    if request.args.get("length") == None:
+      length = 0
+    else:
+      length = int(request.args.get("length"))
+   
     if length <= len(message):
       output = message[0:length]
     else:
@@ -44,4 +50,4 @@ def demo():
   except ValueError:
     output = "Error: input must be an integer"
   
-  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"templates/demonstration.css\"> Input: <br> <form method=\"get\"> Request: <input type=\"text\" name=\"request\"> <br> Length of request: <input type=\"text\" name=\"length\"> <br> <input type=\"submit\"> </form> Output: <br>" + str(output)
+  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/demonstration.css\"> Input: <br> <form method=\"get\"> Request: <input type=\"text\" name=\"request\"> <br> Length of request: <input type=\"text\" name=\"length\"> <br> <input type=\"submit\"> </form> Output: <br>" + str(output)
