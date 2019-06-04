@@ -30,12 +30,12 @@ def method():
 def style():
   return render_template("style.css")
 
-#what the heart beet protocol would return
+#what the heartbeat protocol would return
 output = ""
 #very secret data no one should know that we totally won't expliot :)
 secret_string = "a97b79,password_user_bob=\"password12345\",cookie_data_session_1=\"bannana\",123f7a757575a57c57meaning_of_life=42,"
 
-@app.route("/demonstration")
+@app.route("/demo.html")
 def demo():
   global output
   #if the request field is empty leave it is blank otherwise popualte it
@@ -71,5 +71,9 @@ def demo():
     output = "Error: length of data must be an integer"
   
   #html stuff
+<<<<<<< HEAD
   return "<style> body { font-family: \"Comic Sans MS\", cursive, sans-serif; }</style><body>\n<p><a href=\"/\">Back</a><br>\n  Input: <br>\n <form method=\"get\">\n Data: <input type=\"text\" name=\"request\"> <br>\n Length of data: <input type=\"text\" name=\"length\"> <br>\n <input type=\"submit\" value=\"Send heartbeet\">\n </form>\n Output: <br>" + str(output) + "</p></body>"
+=======
+  return render_template("demo.html",content = str(output))
+>>>>>>> 69d299fd0f002d3550b4b4e9f1a5bbf45105d5ca
  
