@@ -59,4 +59,5 @@ def demo():
     output = "Error: input must be an integer"
   
   #html stuff
-  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/demonstration.css\"> Input: <br> <form method=\"get\"> Request: <input type=\"text\" name=\"request\"> <br> Length of request: <input type=\"text\" name=\"length\"> <br> <input type=\"submit\"> </form> Output: <br>" + str(output)
+  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/demonstration.css\">\n Input: <br>\n <form method=\"get\">\n Request: <input type=\"text\" name=\"request\"> <br>\n Length of request: <input type=\"text\" name=\"length\"> <br>\n <input type=\"submit\">\n </form>\n Output: <br>" + str(output)
+ 
