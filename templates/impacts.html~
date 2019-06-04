@@ -25,9 +25,10 @@
 </div></div>
 <!--main content div as well as subdiv-->
 <div id="main"><div id="maininner">
-<h1>Home page</h1>
-<p>By Ben Bartley and Joseph Davies</p>
-<img src="/heartbleed_logo.png" alt="heartbleed_logo.png"></img>
+<h1>What were the impacts</h1>
+<p>While there were no major compromisations as a result the heartbleed exploit most websites recommended changing your password and taking other related security measures as it was unsure what data has been stolen. The reason it was such a big issues wasn’t that it did a lot but it has the potential to do a lot and people got scared.</p>
+<p>Companies like github and facebook requested their users secure their accounts even though no data was stolen.</p><br>
+
 
 
 

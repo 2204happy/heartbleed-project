@@ -15,8 +15,6 @@
 <br>
 <li><a href="buffer.html" class="sidebarlink">What are memory and buffers</a></li>
 <br>
-<li><a href="method.html" class="sidebarlink">How the expliot worked</a></li>
-<br>
 <li><a href="impacts.html" class="sidebarlink">Impacts of heatbleed</a></li>
 <br>
 <li><a href="/demonstration" class="sidebarlink">Interactive demonstation of heartbleed expliot</a></li>
@@ -25,9 +23,11 @@
 </div></div>
 <!--main content div as well as subdiv-->
 <div id="main"><div id="maininner">
-<h1>Home page</h1>
-<p>By Ben Bartley and Joseph Davies</p>
-<img src="/heartbleed_logo.png" alt="heartbleed_logo.png"></img>
+<h1>What is open SSL and why is it used</h1>
+<p>Openssl is a library for connection security. It allows people to use standard security protocols without having to go to the difficulty of implementing them especially as many of them are highly mathematical. Openssl provides many many features for whatever it is needed for. In the case of the heartbleed exploit the heartbeat protocol which is one protocol openssl offers was found to have a vulnerability.</p><br>
+<h1>What is heartbeat</h1>
+<p>The heartbeat protocol is important because it allows computers to make sure the connection between them still exists even if they aren’t actually sending anything. What heartbeat does is every so often it sends out a message saying hey, send me back this message to make sure your still alive.</p>
+
 
 
 

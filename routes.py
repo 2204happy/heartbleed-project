@@ -13,6 +13,18 @@ def index():
 @app.route("/protocols.html")
 def protocols():
   return render_template("protocols.html", thingo = "greeting")
+  
+@app.route("/buffer.html")
+def buffer():
+  return render_template("buffer.html", thingo = "greeting")
+  
+@app.route("/impacts.html")
+def impacts():
+  return render_template("impacts.html", thingo = "greeting")
+  
+@app.route("/method.html")
+def method():
+  return render_template("method.html", thingo = "greeting")
 
 @app.route("/style.css")
 def style():
@@ -21,7 +33,7 @@ def style():
 #what the heart beet protocol would return
 output = ""
 #very secret data no one should know that we totally won't expliot :)
-secret_string = "a97b79,password_user_bob=\"password12345\",cockie_data_session_1=\"bannana\",123f7a757575a57c57meaning_of_life=42,"
+secret_string = "a97b79,password_user_bob=\"password12345\",cookie_data_session_1=\"bannana\",123f7a757575a57c57meaning_of_life=42,"
 
 @app.route("/demonstration")
 def demo():
@@ -56,8 +68,8 @@ def demo():
         with open("bee_movie_script", 'r') as bee_movie_file:
       	  output += bee_movie_file.read(length)
   except ValueError:
-    output = "Error: input must be an integer"
+    output = "Error: length of data must be an integer"
   
   #html stuff
-  return "<link rel=\"stylesheet\" type=\"text/css\" href=\"styles/demonstration.css\">\n Input: <br>\n <form method=\"get\">\n Request: <input type=\"text\" name=\"request\"> <br>\n Length of request: <input type=\"text\" name=\"length\"> <br>\n <input type=\"submit\">\n </form>\n Output: <br>" + str(output)
+  return "<style> body { font-family: \"Comic Sans MS\", cursive, sans-serif; }</style><body>\n<p><a href=\"/\">Back</a><br>\n  Input: <br>\n <form method=\"get\">\n Data: <input type=\"text\" name=\"request\"> <br>\n Length of data: <input type=\"text\" name=\"length\"> <br>\n <input type=\"submit\" value=\"Send heartbeet\">\n </form>\n Output: <br>" + str(output) + "</p></body>"
  

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Heartbleed</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!--sidebar div as well as subdiv (issues with css)-->
+<div id="sidebar"><div id="sidebarinner"><h1></h1>
+<!--navigation links-->
+<h4>Navigation</h4>
+<ul>
+<li><a href="index.html" class="sidebarlink">Home</a></li>
+<br>
+<li><a href="protocols.html" class="sidebarlink">OpenSSL and Heartbeat</a></li>
+<br>
+<li><a href="buffer.html" class="sidebarlink">What are memory and buffers</a></li>
+<br>
+<li><a href="method.html" class="sidebarlink">How the expliot worked</a></li>
+<br>
+<li><a href="impacts.html" class="sidebarlink">Impacts of heatbleed</a></li>
+<br>
+<li><a href="/demonstration" class="sidebarlink">Interactive demonstation of heartbleed expliot</a></li>
+</ul>
+
+</div></div>
+<!--main content div as well as subdiv-->
+<div id="main"><div id="maininner">
+<h1>How does heartbeet work</h1>
+<p>The heartbeet protocol allows you to send some data and have the other machine send it back. The way it does this is by sending the messange and also sending the length of the message. The computer resiving the heartbeet will creat a buffer of the size the message specified, write the data into the buffer and the send it back.</p>
+<h1>How was this explioted</h1>
+<p>Becuase the sender could control what the length value was send the sender could say the message was longer than it actually was. When open SSL was initially made no one though of this and assumed everyone would be sensible so didn't write code to check the length of the message. It was dicovered that if you sent a short message like "hello" and says it was 1000 letters long the data you'd get back was hello followed by the next 994 characters in memory as open SSL didn't clear memory that it had allocated for a buffer and instead just left it as it previously was. Given the way many websites worked it was quite easy to find passwords, cookies or other sensative data if the requested length was long enough. For a better understanding try the demonstration.'</p><br>
+<h1>How it was fixed</h1>
+<p>Fixing the flaw was pretty easy. All the reciever had to do was check the length of the data sent not trust the value send from the sender. Then the buffer that was allocated was made teh cive teh receiver calculated and no longer was there an issue.</p><br>
+
+
+
+
+</div></div>
+
+</body>
+</html>
